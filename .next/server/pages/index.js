@@ -28,7 +28,7 @@ eval("// Exports\nmodule.exports = {\n\t\"aboutSection\": \"aboutSection_aboutSe
   \************************************************************/
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"clients\": \"clientSection_clients__Ftg3i\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2NsaWVudFNlY3Rpb24vY2xpZW50U2VjdGlvbi5tb2R1bGUuc2NzcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2hhZGVlZm9yZ2UvLi9jb21wb25lbnRzL2NsaWVudFNlY3Rpb24vY2xpZW50U2VjdGlvbi5tb2R1bGUuc2Nzcz9hNTE0Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcImNsaWVudHNcIjogXCJjbGllbnRTZWN0aW9uX2NsaWVudHNfX0Z0ZzNpXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/clientSection/clientSection.module.scss\n");
+eval("// Exports\nmodule.exports = {\n\t\"clients\": \"clientSection_clients__Ftg3i\",\n\t\"clientsText\": \"clientSection_clientsText__7WEoH\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2NsaWVudFNlY3Rpb24vY2xpZW50U2VjdGlvbi5tb2R1bGUuc2NzcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vaGFkZWVmb3JnZS8uL2NvbXBvbmVudHMvY2xpZW50U2VjdGlvbi9jbGllbnRTZWN0aW9uLm1vZHVsZS5zY3NzP2E1MTQiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwiY2xpZW50c1wiOiBcImNsaWVudFNlY3Rpb25fY2xpZW50c19fRnRnM2lcIixcblx0XCJjbGllbnRzVGV4dFwiOiBcImNsaWVudFNlY3Rpb25fY2xpZW50c1RleHRfXzdXRW9IXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/clientSection/clientSection.module.scss\n");
 
 /***/ }),
 

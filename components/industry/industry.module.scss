@@ -1,19 +1,25 @@
 .industry{
-    background-image: url('/images/black1.png');
+    background-image: url('/images/black1.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 300px;
+    background-size: 100%;
     h5{
         text-align: center;
         margin-bottom: 20px;
+        margin-top: 50px;
+        font-weight: 600;
     }
     img{
-        width: 380px;
-        height: 400px;
+        width: 100%;
         border-radius: 30px;
         
     }
     p{
-        color: rgba(251, 251, 251, 1);
+        color: #ffffff;
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 24px;
     }
 }
