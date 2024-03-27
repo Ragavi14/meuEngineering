@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/global.scss';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from "../components/navigation/navigation";
 import Footer from "../components/footer/footer";
 import Industry from "../components/industry/industry";
