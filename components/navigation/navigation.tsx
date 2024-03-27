@@ -1,13 +1,32 @@
-"use client";
-import React, {useState} from "react";
+// components/Header.js
+
+import React, { useState, useEffect } from "react";
 import styles from './navigation.module.scss';
 
-export default function Navigation() {
+const Header = () => {
+    const [scrolled, setScrolled] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 100) { // Adjust 100 to your desired scroll position
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <header className={styles.header}>
-            <div className="container">
+        <header className={scrolled ? 'scrolled' : ''}>
+            <div className={`${styles.headerMain} container`}>
                 <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                         <img src={`/images/logo.svg`} />
@@ -28,11 +47,11 @@ export default function Navigation() {
 
                             <a href={`#`} className={`btn btn-primary`}>Contact</a>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
+
+export default Header;

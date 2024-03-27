@@ -1,33 +1,27 @@
-.header{
-    background: none;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    img{
-        width: 150px;
+.headerMain{
+  img{
+    width: 150px;
+  }
+  li{
+    padding-left: 20px;
+    padding-right: 20px;
+    a{
+      color: #ffffff !important;
     }
-    li{
-        padding-left: 20px;
-        padding-right: 20px;
-        a{
-            color: #ffffff !important;
-        }
-    }
+  }
 
-    .contactIcon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .callIcon{
-            color: #ffffff;
-            font-weight: 600;
-            margin-right: 10px;
-        }
-        img {
-            width: 30px;
-            margin-right: 10px;
-        }
+  .contactIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .callIcon{
+      color: #ffffff;
+      font-weight: 600;
+      margin-right: 10px;
     }
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  }
 }
