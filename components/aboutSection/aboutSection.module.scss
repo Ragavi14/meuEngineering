@@ -1,22 +1,28 @@
 .aboutSection{
     background: #0591D3;
-    background-image: url('/images/black.png');
+    background-image: url('/images/black.svg');
+    background-position: 0px 350px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 120px;
     h4{
-        width: 650px;
         text-align: center;
         color: #fff;
-        margin-left: 25%;
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 400;
+        margin-bottom: 50px;
     }
     a{
         color: #fff;
         background-color: #3A4856;
-        margin-left: 45%;
-        margin-top: 20px;
+
     }
     h5{
         color: #fff;
         text-align: center;
         margin-top: 50px;
+        margin-bottom: 30px;
     }
     .Img{
         display: flex;
@@ -26,12 +32,10 @@
             width: 200px;
             height: 222px;
             border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #fff;
-            // img{
-            //    margin-top: 50px; 
-            //    margin-left: 20px; 
-            // }
-            
         }
         p{
             color: #fff;
@@ -41,11 +45,20 @@
         h6{
             color: #fff;
             text-align: center;
-            width: 48%;
+            font-size: 30px;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            width: 60%;
+            margin: auto;
         }
         .Btn{
             display: flex;
-            // justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
+            a{
+                margin-right: 20px;
+                margin-left: 20px;
+            }
         }
     }
 }

@@ -5,12 +5,13 @@ export default function aboutSection (){
     return(
         <div className={`${styles.aboutSection}`}>
             <div className="container">
-                <h4>
-                MEU is not only a preferred supplier for industries in Bangalore i.e., Catering to the technical
-                 demands of the customers all over India. We exporting our precision Engineering tools to western
-                  countries.
-                </h4>
-                <a href="#" className="btn">Learn more</a>
+                <div className="row">
+                    <div className={`col-8 mx-auto text-center`}>
+                        <h4>MEU is not only a preferred supplier for industries in Bangalore i.e., Catering to the technical demands of the customers all over India. We exporting our precision Engineering tools to western countries.</h4>
+                        <a href="#" className="btn">Learn more</a>
+                    </div>
+                </div>
+
                 <div className={`${styles.Img} row`}>
                     <h5>OUR PRODUCTS</h5>
                     <div className="col-md-2">
@@ -51,9 +52,9 @@ export default function aboutSection (){
                     </div>
                     <h6>We manufacture different types of high performance Carbide & HSS Tools to machine-wide 
                     variety of metals & acrylic.</h6>
-                    <div className={`${styles.Btn} row`}>
-                        <a href="#" className="btn col-md-2">View Catalogue</a>
-                        <a style={{}} href="#" className="btn col-md-2">Get a Quote</a>
+                    <div className={`${styles.Btn}`}>
+                        <a href="#" className="btn btn-primary">View Catalogue</a>
+                        <a href="#" className="btn btn-primary">Get a Quote</a>
                     </div>
                 </div>
             </div>
