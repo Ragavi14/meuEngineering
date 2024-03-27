@@ -1,0 +1,51 @@
+.aboutSection{
+    background: #0591D3;
+    background-image: url('/images/black.png');
+    h4{
+        width: 650px;
+        text-align: center;
+        color: #fff;
+        margin-left: 25%;
+    }
+    a{
+        color: #fff;
+        background-color: #3A4856;
+        margin-left: 45%;
+        margin-top: 20px;
+    }
+    h5{
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .Img{
+        display: flex;
+        justify-content: space-evenly;
+       
+        .ImgDiv{
+            width: 200px;
+            height: 222px;
+            border-radius: 30px;
+            background-color: #fff;
+            // img{
+            //    margin-top: 50px; 
+            //    margin-left: 20px; 
+            // }
+            
+        }
+        p{
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        h6{
+            color: #fff;
+            text-align: center;
+            width: 48%;
+        }
+        .Btn{
+            display: flex;
+            // justify-content: space-evenly;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.nav{
+    // margin-top: 20px;
+    // background-color: rgb(17, 144, 218);
+    background: #0591D3;
+
+    img{
+       
+    }
+    .menuItems{
+        display: flex;
+        justify-content: space-evenly ;
+        align-items: center;
+        color: rgba(251, 251, 251, 1);
+        a{
+            text-decoration: none;
+            color: rgba(251, 251, 251, 1);
+        }
+        
+    }
+    .Btn{
+        display: flex;
+        justify-content: end;
+        img{
+            width: 25px;
+        }
+        p{
+            margin: 25px;
+            color: rgba(251, 251, 251, 1);
+        }
+        button{
+            background: rgba(58, 72, 86, 1);
+            color: rgba(251, 251, 251, 1);
+            margin: 20px;
+        }
+    }
+}
