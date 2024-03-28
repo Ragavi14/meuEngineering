@@ -29,6 +29,19 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+<<<<<<< HEAD
+=======
+    ],
+    "/about-company": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about-company.js"
+    ],
+    "/product": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/product.js"
+>>>>>>> cfc773a (changes)
     ]
   },
   "ampFirstPages": []
