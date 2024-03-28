@@ -1,0 +1,31 @@
+.contactContent{
+  padding-top: 50px;
+  .addressCard{
+    p{
+      font-size: 16px;
+      color: #0591D3;
+    }
+    h3{
+      padding-bottom: 20px;
+      font-size: 28px;
+    }
+    h6{
+      padding-bottom: 20px;
+    }
+  }
+
+  .formBlock{
+    border-radius: 24px 24px 24px 24px;
+    background-color: #FFFFFF;
+    padding-top: 48px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    border: 1px solid #efefef;
+    margin-bottom: 40px;
+    h2{
+      font-size: 32px;
+      padding-right: 80px;
+    }
+  }
+}
