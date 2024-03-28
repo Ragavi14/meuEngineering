@@ -7,6 +7,7 @@ import InnerHero from "../components/innerHero/innerHero";
 import AboutContent from "../components/aboutContent/aboutContent";
 import ProductContent from "../components/productContent/productContent";
 import ProductDetails from "../components/productDetails/productDetails";
+import Industires from "../components/industries/industires";
 
 export default function Home() {
   
@@ -14,8 +15,7 @@ export default function Home() {
       <div>
           <Header/>
           <InnerHero/>
-         
-
+          <Industires/>
           <Industry/>
           <Footer/>
       </div>
