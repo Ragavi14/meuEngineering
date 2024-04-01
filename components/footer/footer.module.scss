@@ -3,16 +3,17 @@
     color: rgba(251, 251, 251, 1);
     padding-top: 20px;
     .box{
-        background-color: rgba(251, 251, 251, 1);
-        border: 1px solid rgba(251, 251, 251, 1);
+        border: 1px solid rgb(90 90 90);
         border-radius: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0px 40px;
+        padding: 20px 40px;
+        text-align: center;
+        margin-bottom: 20px;
         p{
-            color: rgba(0, 0, 0, 1);
-            font-size: 32px;
+            color: #0591d3;
+            font-size: 28px;
             font-weight: 600;
         }
         button{
@@ -41,6 +42,7 @@
     .copyRight{
         padding: 20px;
         text-align: center;
+        font-size: 13px;
     }
     .phone{
         text-align: center;

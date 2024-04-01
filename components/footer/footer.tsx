@@ -6,14 +6,11 @@ export default function Navigation() {
         <div className={`${styles.footer}`}>
             <div className="container">
                 <div className={`${styles.box} row`}>
-                    <div className="col-md-10">
+                    <div className="col-md-12">
                         <p>Didn't find the service you wanted?</p>
                         <button className="btn btn-primary">Enquire Now</button>
                     </div>
 
-                    <div className="col-md-2">
-                        <img src="/images/tool.png" />
-                    </div>
                 </div>
                 <div className={`${styles.address} row justify-content-center align-items-center`}>
                     <div className="col-md-2">

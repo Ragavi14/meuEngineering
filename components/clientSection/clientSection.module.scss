@@ -2,9 +2,25 @@
     img{
         margin: 15px;
     }
+    position: relative;
+    &:before{
+        background: linear-gradient(90deg, var(--black-100) 0, hsla(0, 0%, 100%, 0) 100%);
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        user-select: none;
+        width: 5%;
+        z-index: 1;
+    }
 }
 
 .clientsText{
+
     h2{
         font-size: 24px;
     }
