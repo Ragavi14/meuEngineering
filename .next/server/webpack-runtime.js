@@ -127,6 +127,7 @@
 /******/ 	(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("3bc4578eba9d2691")
 =======
 /******/ 		__webpack_require__.h = () => ("03c5079e9a3cd385")
@@ -137,6 +138,9 @@
 /******/ 		__webpack_require__.h = () => ("7c2c5d39a25dc5a7")
 >>>>>>> 3e59ffc (changes)
 >>>>>>> 16d6a8d (changes)
+=======
+/******/ 		__webpack_require__.h = () => ("2a040bb1445c6c34")
+>>>>>>> b08214d (changes)
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

@@ -7,17 +7,37 @@ import InnerHero from "../components/innerHero/innerHero";
 import AboutContent from "../components/aboutContent/aboutContent";
 import ProductContent from "../components/productContent/productContent";
 import ContactContent from "../components/contactContent/contactContent";
+import { ApiService } from '../services/api.service';
 
-export default function Home() {
+
+export default function Home(props: any) {
   
   return (
       <div>
-          <Header/>
+          <Header nav={props.nav[0].acf} />
           <InnerHero/>
           <ContactContent/>
 
 
-          <Footer/>
+          <Footer footer={props.footer[0].acf} />
       </div>
   )
+}
+
+export async function getServerSideProps() {
+  const baseUrl = new ApiService();
+  const response = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/navigationsection`);
+  const nav = await response.json(); 
+
+  const resFooter = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/footer`);
+  const footer = await resFooter.json(); 
+
+
+if (nav && nav.length > 0) {
+  return {props: {nav, footer}}
+}
+else {
+  return {props: {}}
+}
+
 }
