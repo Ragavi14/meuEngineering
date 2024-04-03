@@ -15,8 +15,8 @@ export default function Home(props: any) {
   return (
       <div>
           <Header nav={props.nav[0].acf} />
-          <InnerHero/>
-          <ContactContent/>
+          <InnerHero banner={props.contact[0].acf.banner}/>
+          <ContactContent contact={props.contact[0].acf.contact}/>
 
 
           <Footer footer={props.footer[0].acf} />
@@ -32,9 +32,12 @@ export async function getServerSideProps() {
   const resFooter = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/footer`);
   const footer = await resFooter.json(); 
 
+  const resContact = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/contactsection`);
+  const contact = await resContact.json(); 
+
 
 if (nav && nav.length > 0) {
-  return {props: {nav, footer}}
+  return {props: {nav, footer, contact}}
 }
 else {
   return {props: {}}

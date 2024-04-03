@@ -1,61 +1,33 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
 
-export default function aboutSection (){
+export default function aboutSection (about: any){
+   
     return(
         <div className={`${styles.aboutSection}`}>
             <div className="container">
                 <div className="row">
                     <div className={`col-8 mx-auto text-center`}>
-                        <h4>MEU is not only a preferred supplier for industries in Bangalore i.e., Catering to the technical demands of the customers all over India. We exporting our precision Engineering tools to western countries.</h4>
-                        <a href="#" className="btn">Learn more</a>
+                        <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
+                        <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
                     </div>
                 </div>
 
                 <div className={`${styles.Img} row`}>
-                    <h5>OUR PRODUCTS</h5>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/drill.png" /> 
-                        </div>
-                        <p>Drills</p>
-                    </div>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/mole.png" /> 
-                        </div>
-                        <p>Mole Mills</p>
-                    </div>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/cutter.png" /> 
-                        </div>
-                        <p>Cutters</p>
-                    </div>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/reamer.png" /> 
-                        </div>
-                        <p>Reamer</p>
-                    </div>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/face.png" /> 
-                        </div>
-                        <p>Face Cutter</p>
-                    </div>
-                    <div className="col-md-2">
-                        <div className={`${styles.ImgDiv}`}>
-                            <img src="/images/metal.png" /> 
-                        </div>
-                        <p>Metal Siting Saws</p>
-                    </div>
-                    <h6>We manufacture different types of high performance Carbide & HSS Tools to machine-wide 
-                    variety of metals & acrylic.</h6>
-                    <div className={`${styles.Btn}`}>
-                        <a href="#" className="btn btn-primary">View Catalogue</a>
-                        <a href="#" className="btn btn-primary">Get a Quote</a>
-                    </div>
+                    <h5>{about.about.products.title}</h5>
+                        {about.about.products.img_div.map((element: any, index: any)=>(
+                            <div className="col-md-2" key={index}>
+                                <div className={`${styles.ImgDiv}`}>
+                                    <img src={element.img} /> 
+                                </div>
+                                <p>{element.name}</p>
+                            </div>
+                        ))}
+                     <div dangerouslySetInnerHTML={{ __html: about.about.text }} />
+                        <div className={`${styles.Btn}`}>
+                            <a href={about.about.button[0].link} className="btn btn-primary"> {about.about.button[0].name} </a>
+                            <a href={about.about.button[1].link} className="btn btn-primary">{about.about.button[1].name}</a>
+                        </div>                  
                 </div>
             </div>
 

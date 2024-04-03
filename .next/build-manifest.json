@@ -30,6 +30,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     ],
     "/about-company": [
@@ -42,6 +43,8 @@
       "static/chunks/main.js",
       "static/chunks/pages/product.js"
 >>>>>>> cfc773a (changes)
+=======
+>>>>>>> 7b6c6a4 (changes)
     ]
   },
   "ampFirstPages": []

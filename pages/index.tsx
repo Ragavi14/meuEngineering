@@ -14,9 +14,9 @@ export default function Home(props: any) {
   return (
       <div>
          <Navigation nav={props.nav[0].acf} />
-         <HeroSection/>
-         <AboutSection/>
-         <ClientSection/>
+         <HeroSection slider={props.home[0].acf.slider}/>
+         <AboutSection about={props.home[0].acf} />
+         <ClientSection client={props.home[0].acf.clients}/>
          <Industry industry={props.industry[0].acf} />
          <Footer footer={props.footer[0].acf} />
       </div>
@@ -34,10 +34,13 @@ export async function getServerSideProps() {
   const resIndustry = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/industrysection`);
   const industry = await resIndustry.json(); 
 
+  const resHome = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/homepagesection`);
+  const home = await resHome.json();
+
 
 
 if (nav && nav.length > 0) {
-  return {props: {nav, footer, industry}}
+  return {props: {nav, footer, industry, home}}
 }
 else {
   return {props: {}}

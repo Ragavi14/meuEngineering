@@ -2,11 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
   "/": "pages/index.js"
-=======
-  "/about-company": "pages/about-company.js",
-  "/contact": "pages/contact.js",
-  "/product": "pages/product.js"
->>>>>>> cfc773a (changes)
 }

@@ -1,16 +1,3 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "/not-found": "app/not-found.js"
-=======
-  "/not-found": "app/not-found.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
->>>>>>> cfc773a (changes)
-=======
-  "/not-found": "app/not-found.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
-=======
-  "/not-found": "app/not-found.js"
->>>>>>> 6aa0c48 (changes)
->>>>>>> 61132c7 (changes)
 }

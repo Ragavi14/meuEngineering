@@ -13,8 +13,8 @@ export default function Home(props: any) {
   return (
       <div>
           <Header nav={props.nav[0].acf} />
-          <InnerHero/>
-          <Facilities/>
+          <InnerHero banner={props.facilities[0].acf.banner}/>
+          <Facilities facilities={props.facilities[0].acf.facilities}/>
           <Industry industry={props.industry[0].acf} />
           <Footer footer={props.footer[0].acf} />
       </div>
@@ -32,8 +32,11 @@ export async function getServerSideProps() {
   const resIndustry = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/industrysection`);
   const industry = await resIndustry.json(); 
 
+  const resFacilities = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/facilitiessection`);
+  const facilities = await resFacilities.json(); 
+
 if (nav && nav.length > 0) {
-  return {props: {nav, footer, industry}}
+  return {props: {nav, footer, industry, facilities}}
 }
 else {
   return {props: {}}

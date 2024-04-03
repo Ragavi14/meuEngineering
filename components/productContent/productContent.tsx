@@ -2,151 +2,26 @@ import React from "react";
 import styles from './productContent.module.scss';
 
 
-export default function ProductContent () {
+export default function ProductContent (products: any) {
+    // console.log('Prodd=',products);
     return(
         <div className={styles.productContent}>
             <div className={`container`}>
-                <div className={styles.productList}>
-                <h3>Product Title</h3>
-                <div className={`row`}>
-                    <div className={`col`}>
-                        <div className={styles.imgCard}>
-                            <img src={`/images/pro1.jpg`} />
-                            <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
+                {products.products.products.map((element: any, index: any)=>(
+                    <div className={styles.productList}>
+                        <h3>{element.product_item.title}</h3>
+                        <div className={`row`} key={index}>
+                            {element.product_item.img_card.map((ele: any, ind: any)=>(
+                                <div className={`col`} key={ind}>
+                                    <div className={styles.imgCard}>
+                                        <img src={ele.img} />
+                                        <p>{ele.name}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    <div className={`col`}>
-                        <div className={styles.imgCard}>
-                            <img src={`/images/pro1.jpg`} />
-                            <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                        </div>
-                    </div>
-                    <div className={`col`}>
-                        <div className={styles.imgCard}>
-                            <img src={`/images/pro1.jpg`} />
-                            <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                        </div>
-                    </div>
-                    <div className={`col`}>
-                        <div className={styles.imgCard}>
-                            <img src={`/images/pro1.jpg`} />
-                            <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                        </div>
-                    </div>
-                    <div className={`col`}>
-                        <div className={styles.imgCard}>
-                            <img src={`/images/pro1.jpg`} />
-                            <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div className={styles.productList}>
-                    <h3>Product Title</h3>
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={styles.productList}>
-                    <h3>Product Title</h3>
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.productList}>
-                    <h3>Product Title</h3>
-                    <div className={`row`}>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                        <div className={`col`}>
-                            <div className={styles.imgCard}>
-                                <img src={`/images/pro1.jpg`} />
-                                <p>GT-15 SOLID CARBIDE DRILL REAMER</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     )
