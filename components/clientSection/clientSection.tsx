@@ -3,7 +3,8 @@ import styles from './clientSection.module.scss';
 import Slider from "react-slick";
 
 
-export default function ClientSection () {
+export default function ClientSection (client: any) {
+    
     const settings = {
         dots: false,
         infinite: true,
@@ -21,25 +22,18 @@ export default function ClientSection () {
                 <div className={`row`}>
                     <div className={`col-12 text-center pt-5`}>
                         <div className={styles.clientsText}>
-                            <h2>Trusted by top-tier companies</h2>
+                            <h2>{client.client.title}</h2>
                         </div>
                     </div>
                 </div>
                 <div className={styles.clients}>
-                 <Slider {...settings}>
-                     <div className={styles.clientIcon}><img src="/images/1.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/2.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/3.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/4.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/5.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/6.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/7.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/8.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/5.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/6.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/7.png" alt="images" /></div>
-                     <div className={styles.clientIcon}><img src="/images/8.png" alt="images" /></div>
-                 </Slider>
+                    <Slider {...settings}>
+                        {client.client.client_img.map((element: any, index: any)=>(                                                 
+                            <div className={styles.clientIcon} key={index}> 
+                                <img src={element.img} alt={element.name} /> 
+                            </div>                         
+                        ))}
+                    </Slider>
                 </div>
             </div>
         </div>
