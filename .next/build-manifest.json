@@ -29,22 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     ],
-    "/about-company": [
+    "/facilities": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/about-company.js"
-    ],
-    "/product": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/product.js"
->>>>>>> cfc773a (changes)
-=======
->>>>>>> 7b6c6a4 (changes)
+      "static/chunks/pages/facilities.js"
     ]
   },
   "ampFirstPages": []
