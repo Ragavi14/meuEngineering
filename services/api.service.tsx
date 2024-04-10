@@ -12,7 +12,7 @@ export class ApiService {
           
         }
         else{
-            return "http://localhost/MeuEngineering/wp-meu/";
+          return "https://wpmeu.netiapps.com/";
         }
            
       }
