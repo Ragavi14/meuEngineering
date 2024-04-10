@@ -4,7 +4,7 @@ export class ApiService {
     public getBaseUrl(): string {
         if(process.env.NEXT_PUBLIC_API_ENV == 'production'){
            
-          return "https://wpmeu.netiapps.com//";
+          return "https://wpmeu.netiapps.com/";
         }
        else if(process.env.NEXT_PUBLIC_API_ENV == 'dev'){
          
