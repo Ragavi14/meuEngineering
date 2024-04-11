@@ -7,7 +7,7 @@ export default function Navigation(footer: any) {
         <div className={`${styles.footer}`}>
             <div className="container">
                 <div className={`${styles.box} row`}>
-                    <div className="col-md-10">
+                    <div className="col-md-10 text-start">
                         <p> {footer.footer.box.text} </p>
                         <a href={footer.footer.box.link} className="btn btn-primary"> {footer.footer.box.button_name} </a>
                     </div>
