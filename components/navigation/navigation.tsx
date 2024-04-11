@@ -28,43 +28,38 @@ const Header = (nav: any) => {
     return (
         <header className={scrolled ? 'scrolled' : ''}>
             <div className={`${styles.headerMain} container`}>
-            <nav className="navbar navbar-expand-lg">
-                <div className="container-fluid">
-                <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href={nav.nav.logo.link} className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                        <img src={nav.nav.logo.img} />
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        {nav.nav.menu.map((element: any, index: any)=>(
-                            <li key={index}>
-                                <a href={element.menu_item.link} className="nav-link px-2 link-secondary"> {element.menu_item.name} </a>
-                            </li>
-                        ))}
-                    </ul>
 
-                    <div className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <div className={styles.contactIcon}>
-                            <div className={styles.callIcon}>
-                                <img src={`/images/call.svg`} /> {nav.nav.number}
+
+                <nav className="navbar navbar-expand-lg ">
+                    <div className="container-fluid">
+                        <a className="navbar-brand" href={nav.nav.logo.link}> <img src={nav.nav.logo.img} /></a>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                                {nav.nav.menu.map((element: any, index: any)=>(
+                                    <li key={index}>
+                                        <a href={element.menu_item.link} className="nav-link px-2 link-secondary"> {element.menu_item.name} </a>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="d-flex">
+                                <div className={styles.contactIcon}>
+                                    <div className={styles.callIcon}>
+                                        <img src={`/images/call.svg`} /> {nav.nav.number}
+                                    </div>
+
+                                    <a href={nav.nav.contact.link} className={`btn btn-primary`}> {nav.nav.contact.name} </a>
+                                </div>
                             </div>
-
-                            <a href={nav.nav.contact.link} className={`btn btn-primary`}> {nav.nav.contact.name} </a>
                         </div>
                     </div>
-                </div>
-                </div>
-            </nav>
+                </nav>
 
             </div>
-
-
-
-
 
         </header>
     );
