@@ -22,12 +22,13 @@ export default function HeroSection(slider: any) {
        <div className={`${styles.banner}`} >
                <Slider {...settings}>
                     {slider.slider.map((element: any, index: any)=>(
-                        <div className={`container`}>
-                            <div className={`row`} key={index}>
+                        <div key={index}>
+                            <div className={`container`} >
+                                <div className={`row`}>
                                     <div className={`col-md-6 p-5`}>
                                         <div className={`d-flex justify-content-center align-items-center h-100`}>
                                             <div>
-                                            <div dangerouslySetInnerHTML={{ __html: element.text_content.text }} />
+                                                <div dangerouslySetInnerHTML={{ __html: element.text_content.text }} />
                                                 <div className={`d-flex justify-content-start align-items-center`}>
                                                     <button className="btn me-3"> {element.text_content.button} </button>
                                                     <img src={element.text_content.img} />
@@ -51,6 +52,7 @@ export default function HeroSection(slider: any) {
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     ))}
