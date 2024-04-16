@@ -24,10 +24,12 @@ export default function ProductDetails (productDetails: any) {
                         <h3>{productDetails.productDetails.title}</h3>
                         <div className={`row`}>
                             {productDetails.productDetails.products.map((element: any, index: any)=>(
-                            <div className={`col`}>
+                            <div className={`col`} key={index}>
                                 <div className={styles.imgCard}>
-                                    <img src={element.img} />
-                                    <p>{element.name}</p>
+                                    <a href={element.pdf} target="_blank">
+                                        <img src={element.img} />
+                                        <p>{element.name}</p>
+                                    </a>
                                 </div>
                             </div>
                             ))}
