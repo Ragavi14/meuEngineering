@@ -10,9 +10,9 @@ export default function ProductContent (products: any) {
                 {products.products.products.map((element: any, index: any)=>(
                     <div className={styles.productList}>
                         <h3>{element.product_item.title}</h3>
-                        <div className={`row`} key={index}>
+                        <div className={`row `} key={index}>
                             {element.product_item.img_card.map((ele: any, ind: any)=>(
-                                <div className={`col`} key={ind}>
+                                <div className={`col-md-3`} key={ind}>
                                     <div className={styles.imgCard}>
                                         <img src={ele.img} />
                                         <p>{ele.name}</p>
