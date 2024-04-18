@@ -15,7 +15,7 @@ export default function ProductContent (products: any) {
                         <h3>{element.product_item.title}</h3>
                         <div className={`row`} key={index}>
                             {element.product_item.img_card.map((ele: any, ind: any)=>(
-                                <div className={`col`} key={ind}>
+                                <div className={`col-md-3`} key={ind}>
                                     <div className={styles.imgCard}>
                                         <a href={baseUrl.getSiteUrl() + 'products/' + ele.link} >
                                         <img src={ele.img} />
