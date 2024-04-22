@@ -20,4 +20,54 @@
       text-decoration: none;
     }
   }
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+ li {
+  margin: 0 5px;
+}
+
+ li button {
+  padding: 5px 10px;
+  border: 1px solid #a8a7a7;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+ li button:active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+ li button:disabled  {
+  pointer-events: none;
+  opacity: 0.2;
+  
+}
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.filter input[type="text"] {
+  margin-left: 10px; /* Adjust spacing between input and other elements */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Optionally, you can align the text to the left */
+.filter input[type="text"]::placeholder {
+  text-align: left;
+}
+
 }
