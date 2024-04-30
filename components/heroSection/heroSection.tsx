@@ -2,11 +2,14 @@ import React from "react";
 import styles from './heroSection.module.scss'
 import { url } from "inspector";
 import Slider from "react-slick";
+import { ApiService } from '../../services/api.service';
 
 
 export default function HeroSection(slider: any) {
 
-    console.log('Banner=',slider);
+    // console.log('Banner=',slider);
+    const baseUrl = new ApiService();
+
 
     const settings = {
         dots: false,
@@ -30,7 +33,7 @@ export default function HeroSection(slider: any) {
                                             <div>
                                                 <div dangerouslySetInnerHTML={{ __html: element.text_content.text }} />
                                                 <div className={`d-flex justify-content-start align-items-center`}>
-                                                    <button className="btn me-3"> {element.text_content.button} </button>
+                                                    <a className="btn me-3" href={baseUrl.getSiteUrl() + 'products/' + element.text_content.link}> {element.text_content.button} </a>
                                                     <img src={element.text_content.img} />
                                                 </div>
                                             </div>

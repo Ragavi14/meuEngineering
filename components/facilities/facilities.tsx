@@ -3,7 +3,7 @@ import styles from './facilities.module.scss';
 
 
 export default function Facilities (facilities: any) {
-    console.log('Faciliii===',facilities);
+    // console.log('Faciliii===',facilities);
     return(
         <div className={styles.productContent}>
         <div className={`container`}>

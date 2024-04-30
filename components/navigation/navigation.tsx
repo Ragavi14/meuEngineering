@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from './navigation.module.scss';
 
 const Header = (nav: any) => {
-    console.log('navvv :',nav);
+    // console.log('navvv :',nav);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {

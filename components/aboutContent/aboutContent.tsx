@@ -3,7 +3,7 @@ import styles from './aboutContent.module.scss';
 
 
 export default function AboutContent (about: any) {
-    console.log('ABTTT:',about);
+    // console.log('ABTTT:',about);
     return(
         <div className={styles.aboutContent}>
             <div className={styles.firstSection}>

@@ -3,7 +3,7 @@ import styles from './innerHero.module.scss';
 
 
 export default function InnerHero (banner: any) {
-    console.log('bannn-==',banner);
+    // console.log('bannn-==',banner);
     return(
         <div className={styles.innerHero}>
             <div className={`container`}>

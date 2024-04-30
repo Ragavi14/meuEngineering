@@ -35,16 +35,11 @@ export default function ProductContent (products: any) {
         <div className={styles.productContent}>
             <div className={`container`}>
                 <div className={styles.filter}>
-                    <input
-                        type="text"
-                        value={filter}
+                    <input type="text" value={filter}
                         onChange={handleFilterChange}
-                        placeholder="Search products..."
-                    />
+                        placeholder="Search products..." />
                 </div>
-                {/* {products.products.products.map((element: any, index: any)=>( */}
                     <div className={styles.productList}>
-                        {/* <h3>{element.product_item.title}</h3> */}
                         <div className={`row`}>
                             {renderProducts.map((ele: any, ind: any)=>(
                                 <div className={`col-md-3`} key={ind}>
@@ -58,11 +53,10 @@ export default function ProductContent (products: any) {
                             ))}
                         </div>
                     </div>
-                {/* ))} */}
             </div>
             {!filter && (
             <Pagination
-                totalItems={products.length}
+            totalItems={filter ? filteredProducts.length : products.products.products.length}
                 itemsPerPage={productsPerPage}
                 onPageChange={handlePageChange}
             />

@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from './footer.module.scss';
 
 export default function Navigation(footer: any) {
-    console.log('Foo==',footer);
+    // console.log('Foo==',footer);
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
+        script.async = true;
+        document.head.appendChild(script);
+        
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
+
     return(
         <div className={`${styles.footer}`}>
             <div className="container">
