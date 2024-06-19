@@ -28,11 +28,15 @@ export default function Navigation(footer: any) {
                     </div>
                 </div>
                 <div className={`${styles.address} row justify-content-center align-items-center`}>
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <img src={footer.footer.logo} />
-                    </div>
-                    <div className="col-md-7">
                         <div dangerouslySetInnerHTML={{ __html: footer.footer.address }} />
+
+                    </div>
+                    {/* <div className="col-md-3">
+                    </div> */}
+                    <div className="col-md-6">
+                        <div dangerouslySetInnerHTML={{ __html: footer.footer.disclaimer }} />
                     </div>
                     <div className="col text-end">
                         <div className={styles.phone}>

@@ -17,8 +17,8 @@ export default function Home(props: any) {
       <div>
           <Header nav={props.nav[0].acf} />
           <InnerHero banner={props.industries[0].acf.banner}/>
-          <Industires industries={props.industries[0].acf.industries}/>
-          <Industry industry={props.industry[0].acf} />
+          <Industires industries={props.industries[0].acf}/>
+          {/* <Industry industry={props.industry[0].acf} /> */}
           <Footer footer={props.footer[0].acf} />
       </div>
   )

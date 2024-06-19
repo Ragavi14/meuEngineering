@@ -9,12 +9,17 @@ export default function Industry(industry: any) {
                 <h5> {industry.industry.title} </h5>
                 <div className="row">
                     {industry.industry.img_div.map((element: any, index: any)=>(
-                    <div className="col-md-4" key={index}>
-                        <a href={element.link} >
-                            <img src={element.img}/>
-                            <p> {element.text} </p>
-                        </a>
-                    </div>
+                    <a href={element.link} className="col-md-3" key={index}>
+                        <div className={styles.imageContainer}>
+                            <div className={styles.imageWrapper}>
+                                <img src={element.img}/>
+                                <div className={styles.hoverContent}>
+                                    <div dangerouslySetInnerHTML={{ __html: element.content }} />
+                                </div>
+                            </div>
+                            <h4> {element.text} </h4>
+                        </div>
+                    </a>
                     ))}
                 </div>
             </div>

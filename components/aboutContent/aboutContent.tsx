@@ -21,7 +21,7 @@ export default function AboutContent (about: any) {
             </div>
             <div className={styles.secondSection}>
                 <div className={`container`}>
-                    <div className={`row justify-content-center align-items-center`}>
+                    {/* <div className={`row justify-content-center align-items-center`}>
                         <div className={`col-md-6`}>
                             <div className={styles.aboutCard}>
                                 <div dangerouslySetInnerHTML={{ __html: about.about.second_content.text }} />
@@ -31,7 +31,21 @@ export default function AboutContent (about: any) {
                             <img src={about.about.second_content.img} />
                         </div>
 
-                    </div>
+                    </div> */}
+                    {about.about.second_content.map((element: any, index: any)=>(
+                        <div className={`row justify-content-center align-items-center my-4`} key={index}>
+                            <div className={(index % 2) == 0 ?`row justify-content-center align-items-center`: `row justify-content-center align-items-center flex-row-reverse`}>
+                                <div className={`col-md-6 text-center`}>
+                                    <img src={element.img} />
+                                </div>
+                                <div className={`col-md-6`}>
+                                    <div className={styles.productContentBlock}>
+                                    <div dangerouslySetInnerHTML={{ __html: element.text }} />
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

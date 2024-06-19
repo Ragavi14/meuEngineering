@@ -10,28 +10,49 @@ export default function ContactContent (contact: any) {
     const baseUrl = new ApiService();
     const [formData, setFormData] = useState({
         name: '',
-        mobile: '',
         email: '',
-        message: '',
+        mobile: '',
+        website: '',
+        file: null,
+        quantity: '',
+        message: ''
       });
 
       const handleChange = (e: any) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({ ...prevData, [name]: value }));
+        const { name, value, files } = e.target;
+        // setFormData((prevData) => ({ ...prevData, [name]: value }));
+        setFormData({
+            ...formData,
+            [name]: files ? files[0] : value
+        });
       };
 
-      const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
-        try {
-          await axios.post(baseUrl.getBaseUrl() + 'wp-json/custom-form/v1/contact/send', formData);
-          console.log('Message sending succeddfully');
-        } catch (error) {
-          console.error('Error sending message:', error);
-         
-
+        
+        const data = new FormData();
+        for (let key in formData) {
+            if (key === 'file' && formData[key]) {
+                data.append(key, (formData as any)[key][0]); // Assuming file is selected using an <input type="file">
+            } else {
+                data.append(key, (formData as any)[key]);
+            }
         }
-        window.location.reload();
-      };
+        
+        try {
+            const response = await axios.post(baseUrl.getBaseUrl() + 'wp-json/custom-form/v1/contact/send', data, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            console.log('Message sent successfully', response);
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+        // window.location.reload();
+    };
+    
+    //   console.log('Data==:',formData);
 
     return(
         <div className={styles.contactContent}>
@@ -48,22 +69,54 @@ export default function ContactContent (contact: any) {
                                 <h2>Fill the form to contact us directly</h2>
 
                                 <div className={styles.form}>
-                                    <div className="form-floating mb-3">
-                                        <input type="text" className="form-control" id="floatingInput"
-                                               placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} />
-                                            <label htmlFor="floatingInput">Full Name</label>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input type="text" className="form-control" id="floatingInput"
+                                                    placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} />
+                                                <label htmlFor="floatingInput">Name</label>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input type="email" className="form-control" id="floatingPassword"
+                                                     placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
+                                                <label htmlFor="floatingPassword">Email</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="form-floating mb-3">
-                                        <input type="email" className="form-control" id="floatingPassword"
-                                               placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
-                                            <label htmlFor="floatingPassword">Email</label>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input type="text" className="form-control" id="floatingPassword"
+                                                    placeholder="Phone" name="mobile" value={formData.mobile} onChange={handleChange}/>
+                                                <label htmlFor="floatingPassword">Phone</label>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input type="text"  id="website" name="website"  className="form-control" 
+                                                    value={formData.website} onChange={handleChange} placeholder="Website" />
+                                                <label  htmlFor="floatingPassword">Website</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="form-floating mb-3">
-                                        <input type="text" className="form-control" id="floatingPassword"
-                                               placeholder="Phone" name="mobile" value={formData.mobile} onChange={handleChange}/>
-                                        <label htmlFor="floatingPassword">Phone</label>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input type="file" id="file"  name="file"  className="form-control" 
+                                                    onChange={handleChange}  />
+                                                <label htmlFor="floatingPassword">File</label>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="form-floating mb-3">
+                                                <input  type="text"  id="quantity" name="quantity" className="form-control"
+                                                    value={formData.quantity} onChange={handleChange}  placeholder="Quantity" />
+                                                <label  htmlFor="floatingPassword">Quantity</label>
+                                            </div>
+                                        </div>
                                     </div>
-
                                     <div className="form-floating mb-3">
                                         <textarea className="form-control h-100" id="floatingPassword"
                                                placeholder="Message" name="message" value={formData.message} onChange={handleChange}/>
