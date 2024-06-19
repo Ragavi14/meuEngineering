@@ -21,17 +21,6 @@ export default function AboutContent (about: any) {
             </div>
             <div className={styles.secondSection}>
                 <div className={`container`}>
-                    {/* <div className={`row justify-content-center align-items-center`}>
-                        <div className={`col-md-6`}>
-                            <div className={styles.aboutCard}>
-                                <div dangerouslySetInnerHTML={{ __html: about.about.second_content.text }} />
-                            </div>
-                        </div>
-                        <div className={`col-md-6 text-center`}>
-                            <img src={about.about.second_content.img} />
-                        </div>
-
-                    </div> */}
                     {about.about.second_content.map((element: any, index: any)=>(
                         <div className={`row justify-content-center align-items-center my-4`} key={index}>
                             <div className={(index % 2) == 0 ?`row justify-content-center align-items-center`: `row justify-content-center align-items-center flex-row-reverse`}>
