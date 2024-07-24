@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./aboutSection.module.scss";
 
 export default function aboutSection (about: any){
-   
+   console.log('Abt:',about);
     return(
         <div className={`${styles.aboutSection}`}>
             <div className="container">
@@ -24,10 +24,14 @@ export default function aboutSection (about: any){
                             </div>
                         ))}
                      <div dangerouslySetInnerHTML={{ __html: about.about.text }} />
-                        <div className={`${styles.Btn}`}>
+                        {/* <div className={`${styles.Btn}`}>
                             <a href={about.about.button[0].link} className="btn btn-primary"> {about.about.button[0].name} </a>
                             <a href={about.about.button[1].link} className="btn btn-primary">{about.about.button[1].name}</a>
-                        </div>                  
+                        </div>                   */}
+                        <div className={`${styles.Btn}`}>
+                            <a href={about.about.buttons.pdf} className="btn btn-primary"> {about.about.buttons.name} </a>
+                            <a href={about.about.buttons.link} className="btn btn-primary">{about.about.buttons.button_name}</a>
+                        </div>
                 </div>
             </div>
 
