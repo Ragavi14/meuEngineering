@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
 
 
 export default function Home(props: any) {
-  
+  console.log('Home:',props);
   return (
       <div>
          <Navigation nav={props.nav[0].acf} />
@@ -37,10 +37,13 @@ export async function getServerSideProps() {
   const resHome = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/homepagesection`);
   const home = await resHome.json();
 
+  const resProductCategory = await fetch(baseUrl.getBaseUrl() + `wp-json/wp/v2/productcategory`);
+  const productcategory = await resProductCategory.json(); 
+
 
 
 if (nav && nav.length > 0) {
-  return {props: {nav, footer, industry, home}}
+  return {props: {nav, footer, industry, home, productcategory}}
 }
 else {
   return {props: {}}

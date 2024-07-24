@@ -6,17 +6,17 @@ import Footer from "../../components/footer/footer";
 import InnerHero from "../../components/innerHero/innerHero";
 import AboutContent from "../../components/aboutContent/aboutContent";
 import ProductContent from "../../components/productContent/productContent";
-import ProductDetails from "../../components/productDetails/productDetails";
+import ProductCategory from '../../components/productCategory/productCategory';
 import { ApiService } from '../../services/api.service';
 
 
 export default function Home(props: any) {
-  console.log('pd=',props);
+  console.log('PCategory=',props);
   return (
       <div>
           <Header nav={props.nav[0].acf} />
-          <InnerHero banner={props.productDetails[0].acf.banner}/>
-          <ProductDetails productDetails={props.productDetails[0].acf}/>
+          <InnerHero banner={props.productcategory[0].acf.banner}/>
+          <ProductCategory ProductCategory={props.productcategory[0].acf}/>
           
           <Industry industry={props.industry[0].acf} />
           <Footer footer={props.footer[0].acf} />
@@ -24,9 +24,9 @@ export default function Home(props: any) {
   )
 }
 
-export async function getServerSideProps(context : {query: { products: any; }; }) {
+export async function getServerSideProps(context : {query: { productCategory: any; }; }) {
   const baseUrl = new ApiService();
-  const {products} = context.query;
+  const {productCategory} = context.query;
 
   const response = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/navigationsection`);
   const nav = await response.json(); 
@@ -37,14 +37,11 @@ export async function getServerSideProps(context : {query: { products: any; }; }
   const resIndustry = await fetch(baseUrl.getBaseUrl() + `wp-json/acf/v3/industrysection`);
   const industry = await resIndustry.json(); 
 
-  const resProductsOverView = await fetch(baseUrl.getBaseUrl() + `wp-json/wp/v2/productoverview`);
-  const productsOverView = await resProductsOverView.json(); 
-
-  const resProductDetails = await fetch(baseUrl.getBaseUrl() + `wp-json/wp/v2/productoverview?slug=${products}`);
-  const productDetails = await resProductDetails.json(); 
+  const resProductCategory = await fetch(baseUrl.getBaseUrl() + `wp-json/wp/v2/productcategory?slug=${productCategory}`);
+  const productcategory = await resProductCategory.json(); 
 
 if (nav && nav.length > 0) {
-  return {props: {nav, footer, industry, productDetails, productsOverView}}
+  return {props: {nav, footer, industry, productcategory}}
 }
 else {
   return {props: {}}

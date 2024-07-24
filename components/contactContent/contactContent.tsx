@@ -18,22 +18,65 @@ export default function ContactContent (contact: any) {
         message: ''
       });
 
-      const handleChange = (e: any) => {
-        const { name, value, files } = e.target;
-        // setFormData((prevData) => ({ ...prevData, [name]: value }));
-        setFormData({
-            ...formData,
-            [name]: files ? files[0] : value
-        });
-      };
+      const [errors, setErrors] = useState({
+        name: '',
+        email: '',
+        mobile: ''
+    });
 
+    const handleChange = (e: any) => {
+        const { name, value, files } = e.target;
+        if (name === 'file') {
+            setFormData({
+                ...formData,
+                [name]: files[0] // Store the file object in the state
+            });
+        } else {
+            setFormData({
+                ...formData,
+                [name]: value
+            });
+        }
+    };
+
+    const validateForm = () => {
+        const { name, email, mobile } = formData;
+        let valid = true;
+        const newErrors = {
+            name: '',
+            email: '',
+            mobile: ''
+        };
+
+        if (!name) {
+            newErrors.name = 'Please enter your Name';
+            valid = false;
+        }
+        if (!email) {
+            newErrors.email = 'Please enter your Email address';
+            valid = false;
+        }
+        if (!mobile) {
+            newErrors.mobile = 'Please enter your Phone Number';
+            valid = false;
+        }
+
+        setErrors(newErrors);
+        return valid;
+    };
+    
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
         
+       
         const data = new FormData();
         for (let key in formData) {
             if (key === 'file' && formData[key]) {
-                data.append(key, (formData as any)[key][0]); // Assuming file is selected using an <input type="file">
+                data.append(key, (formData as any)[key]); // Assuming file is selected using an <input type="file">
             } else {
                 data.append(key, (formData as any)[key]);
             }
@@ -49,10 +92,9 @@ export default function ContactContent (contact: any) {
         } catch (error) {
             console.error('Error sending message:', error);
         }
-        // window.location.reload();
+        window.location.reload();
+        console.log('Data==:',formData);
     };
-    
-    //   console.log('Data==:',formData);
 
     return(
         <div className={styles.contactContent}>
@@ -72,25 +114,28 @@ export default function ContactContent (contact: any) {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="form-floating mb-3">
-                                                <input type="text" className="form-control" id="floatingInput"
-                                                    placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} />
+                                                <input type="text"  className={`form-control ${errors.name ? 'is-invalid' : ''}`}  id="floatingInput"
+                                                    placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} required />
                                                 <label htmlFor="floatingInput">Name</label>
+                                                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-floating mb-3">
-                                                <input type="email" className="form-control" id="floatingPassword"
-                                                     placeholder="Email" name="email" value={formData.email} onChange={handleChange}/>
+                                                <input type="email" className={`form-control ${errors.email ? 'is-invalid' : ''}`}  id="floatingPassword"
+                                                     placeholder="Email" name="email" value={formData.email} onChange={handleChange} required/>
                                                 <label htmlFor="floatingPassword">Email</label>
+                                                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="form-floating mb-3">
-                                                <input type="text" className="form-control" id="floatingPassword"
-                                                    placeholder="Phone" name="mobile" value={formData.mobile} onChange={handleChange}/>
+                                                <input type="text"  className={`form-control ${errors.mobile ? 'is-invalid' : ''}`}  id="floatingPassword"
+                                                    placeholder="Phone" name="mobile" value={formData.mobile} onChange={handleChange} required/>
                                                 <label htmlFor="floatingPassword">Phone</label>
+                                                {errors.mobile && <div className="invalid-feedback">{errors.mobile}</div>}
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -105,7 +150,7 @@ export default function ContactContent (contact: any) {
                                         <div className="col-md-6">
                                             <div className="form-floating mb-3">
                                                 <input type="file" id="file"  name="file"  className="form-control" 
-                                                    onChange={handleChange}  />
+                                                    onChange={handleChange}/>
                                                 <label htmlFor="floatingPassword">File</label>
                                             </div>
                                         </div>
