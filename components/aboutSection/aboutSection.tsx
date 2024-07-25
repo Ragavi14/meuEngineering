@@ -1,5 +1,16 @@
 import React from "react";
 import styles from "./aboutSection.module.scss";
+import Slider from "react-slick";
+
+const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+};
 
 export default function aboutSection (about: any){
    console.log('Abt:',about);
@@ -8,8 +19,20 @@ export default function aboutSection (about: any){
             <div className="container">
                 <div className="row">
                     <div className={`col-8 mx-auto text-center`}>
-                        <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
-                        <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
+                        <Slider {...settings}>
+                            <div>
+                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
+                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
+                            </div>
+                            <div>
+                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
+                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
+                            </div>
+                            <div>
+                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
+                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
+                            </div>
+                        </Slider>
                     </div>
                 </div>
 
