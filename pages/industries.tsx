@@ -5,7 +5,6 @@ import Industry from "../components/industry/industry";
 import Footer from "../components/footer/footer";
 import InnerHero from "../components/innerHero/innerHero";
 import AboutContent from "../components/aboutContent/aboutContent";
-import ProductContent from "../components/productContent/productContent";
 import ProductDetails from "../components/productDetails/productDetails";
 import Industires from "../components/industries/industires";
 import { ApiService } from '../services/api.service';
@@ -18,7 +17,6 @@ export default function Home(props: any) {
           <Header nav={props.nav[0].acf} />
           <InnerHero banner={props.industries[0].acf.banner}/>
           <Industires industries={props.industries[0].acf}/>
-          {/* <Industry industry={props.industry[0].acf} /> */}
           <Footer footer={props.footer[0].acf} />
       </div>
   )

@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 
 
 export default function Industires (industries: any) {
-    console.log('Indd==',industries);
     const router = useRouter()
     const [tab, setTab] = useState(router.query.t)
     const [aerospaceTab, setAerospaceTab] = useState('');
@@ -50,16 +49,11 @@ export default function Industires (industries: any) {
             <div className={`container`}>
                 {industries.industries.industries.map((element: any, index: any)=>(
                 <div className={`row justify-content-center align-items-center my-4`} key={index}>
-                    {/* <div className={(index % 2) == 0 ?`row justify-content-center align-items-center`: `row justify-content-center align-items-center flex-row-reverse`}> */}
-                        {/* <div className={`col-md-6 text-center`}>
-                            <img src={element.img} />
-                        </div> */}
-                        <div>
-                            <div className={styles.productContentBlock}>
+                    <div>
+                        <div className={styles.productContentBlock}>
                             <div dangerouslySetInnerHTML={{ __html: element.text }} />
-                            </div>
                         </div>
-                    {/* </div>   */}
+                    </div>
                 </div>
                 ))}
             </div>
@@ -154,20 +148,6 @@ export default function Industires (industries: any) {
                                 </div>
                             ))}
                         </div>
-                        {/* <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div className="modal-dialog">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                            <div className="modal-body text-center">
-                                {selectedImage && <img src={selectedImage} alt="Selected" className={styles.bigImg} />}
-                            </div>
-
-                            </div>
-                        </div>
-                        </div> */}
                     </div>
 
               </div>

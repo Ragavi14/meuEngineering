@@ -13,7 +13,6 @@ const settings = {
 };
 
 export default function aboutSection (about: any){
-   console.log('Abt:',about);
     return(
         <div className={`${styles.aboutSection}`}>
             <div className="container">
@@ -40,17 +39,15 @@ export default function aboutSection (about: any){
                     <h5>{about.about.products.title}</h5>
                         {about.about.products.img_div.map((element: any, index: any)=>(
                             <div className="col-md-2" key={index}>
-                                <div className={`${styles.ImgDiv}`}>
-                                    <img src={element.img} /> 
-                                </div>
-                                <p>{element.name}</p>
+                                <a href="/product">
+                                    <div className={`${styles.ImgDiv}`}>
+                                        <img src={element.img} /> 
+                                    </div> 
+                                    <p>{element.name}</p>
+                                </a>
                             </div>
                         ))}
                      <div dangerouslySetInnerHTML={{ __html: about.about.text }} />
-                        {/* <div className={`${styles.Btn}`}>
-                            <a href={about.about.button[0].link} className="btn btn-primary"> {about.about.button[0].name} </a>
-                            <a href={about.about.button[1].link} className="btn btn-primary">{about.about.button[1].name}</a>
-                        </div>                   */}
                         <div className={`${styles.Btn}`}>
                             <a href={about.about.buttons.pdf} className="btn btn-primary"> {about.about.buttons.name} </a>
                             <a href={about.about.buttons.link} className="btn btn-primary">{about.about.buttons.button_name}</a>

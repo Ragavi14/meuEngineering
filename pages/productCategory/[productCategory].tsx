@@ -4,20 +4,16 @@ import Header from "../../components/navigation/navigation";
 import Industry from "../../components/industry/industry";
 import Footer from "../../components/footer/footer";
 import InnerHero from "../../components/innerHero/innerHero";
-import AboutContent from "../../components/aboutContent/aboutContent";
-import ProductContent from "../../components/productContent/productContent";
 import ProductCategory from '../../components/productCategory/productCategory';
 import { ApiService } from '../../services/api.service';
 
 
 export default function Home(props: any) {
-  console.log('PCategory=',props);
   return (
       <div>
           <Header nav={props.nav[0].acf} />
           <InnerHero banner={props.productcategory[0].acf.banner}/>
           <ProductCategory ProductCategory={props.productcategory[0].acf}/>
-          
           <Industry industry={props.industry[0].acf} />
           <Footer footer={props.footer[0].acf} />
       </div>

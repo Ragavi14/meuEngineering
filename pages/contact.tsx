@@ -17,8 +17,6 @@ export default function Home(props: any) {
           <Header nav={props.nav[0].acf} />
           <InnerHero banner={props.contact[0].acf.banner}/>
           <ContactContent contact={props.contact[0].acf.contact}/>
-
-
           <Footer footer={props.footer[0].acf} />
       </div>
   )

@@ -3,7 +3,6 @@ import styles from './productCategory.module.scss';
 import { ApiService } from '../../services/api.service';
 
 export default function ProductContent({ ProductCategory }: any) {
-    // console.log('proddd=',ProductCategory);
     const baseUrl = new ApiService();
     
    
