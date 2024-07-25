@@ -19,6 +19,7 @@ export default function HeroSection(slider: any) {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        fade: true,
     };
 
     return (
@@ -32,8 +33,7 @@ export default function HeroSection(slider: any) {
                        <div className={`d-flex justify-content-center align-items-center h-100`}>
 
                                <div>
-                                   <h2>Giving you that Fine Edge in Metal Cutting</h2>
-                                   <p>Giving you that Fine Edge in Metal Cutting</p>
+                                   <h2>MEU embodies leadership and serves as an essential cornerstone of your production success.</h2>
                                    <div className={`d-flex justify-content-start align-items-center`}>
                                    <a className="btn me-3" href={`/`}>Read More</a>
                                        <img src={`/images/iso.png`} />
@@ -44,8 +44,18 @@ export default function HeroSection(slider: any) {
                            <div className={`d-flex justify-content-center align-items-center h-100`}>
 
                                <div>
-                                   <h2>Giving you that Fine Edge in Metal Cutting</h2>
-                                   <p>Giving you that Fine Edge in Metal Cutting</p>
+                                   <h2>Unmatched Precision, Unrivaled Durability: Crafted for Excellence, Engineered for Endurance.</h2>
+                                   <div className={`d-flex justify-content-start align-items-center`}>
+                                       <a className="btn me-3" href={`/`}>Read More</a>
+                                       <img src={`/images/iso.png`} />
+                                   </div>
+                               </div>
+
+                           </div>
+                           <div className={`d-flex justify-content-center align-items-center h-100`}>
+
+                               <div>
+                                   <h2>50 Years of Setting Standards: An Unmatched Legacy</h2>
                                    <div className={`d-flex justify-content-start align-items-center`}>
                                        <a className="btn me-3" href={`/`}>Read More</a>
                                        <img src={`/images/iso.png`} />
