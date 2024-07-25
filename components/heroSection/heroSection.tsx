@@ -22,44 +22,48 @@ export default function HeroSection(slider: any) {
     };
 
     return (
-       <div className={`${styles.banner}`} >
-               <Slider {...settings}>
-                    {slider.slider.map((element: any, index: any)=>(
-                        <div key={index}>
-                            <div className={`container`} >
-                                <div className={`row`}>
-                                    <div className={`col-md-6 p-5`}>
-                                        <div className={`d-flex justify-content-center align-items-center h-100`}>
-                                            <div>
-                                                <div dangerouslySetInnerHTML={{ __html: element.text_content.text }} />
-                                                <div className={`d-flex justify-content-start align-items-center`}>
-                                                    <a className="btn me-3" href={baseUrl.getSiteUrl() + 'products/' + element.text_content.link}> {element.text_content.button} </a>
-                                                    <img src={element.text_content.img} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={`col-md-6`}>
-                                        <div className="carousel-item active">
-                                            <div>
-                                                <div className={``}>
-                                                    <div className={`row justify-content-center align-items-center px-0`}>
+       <div className={`${styles.banner}`}>
 
-                                                        <div className={`col-md-12`}>
-                                                            <div className={styles.bannerImg}>
-                                                                <img src={element.img} alt="images" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
+           <div className={`container`}>
+               <div className={`row justify-content-center align-items-center`}>
+                   <div className={`col-md-6 p-5`}>
+
+                       <Slider {...settings}>
+                       <div className={`d-flex justify-content-center align-items-center h-100`}>
+
+                               <div>
+                                   <h2>Giving you that Fine Edge in Metal Cutting</h2>
+                                   <p>Giving you that Fine Edge in Metal Cutting</p>
+                                   <div className={`d-flex justify-content-start align-items-center`}>
+                                   <a className="btn me-3" href={`/`}>Read More</a>
+                                       <img src={`/images/iso.png`} />
+                                   </div>
+                               </div>
+
+                       </div>
+                           <div className={`d-flex justify-content-center align-items-center h-100`}>
+
+                               <div>
+                                   <h2>Giving you that Fine Edge in Metal Cutting</h2>
+                                   <p>Giving you that Fine Edge in Metal Cutting</p>
+                                   <div className={`d-flex justify-content-start align-items-center`}>
+                                       <a className="btn me-3" href={`/`}>Read More</a>
+                                       <img src={`/images/iso.png`} />
+                                   </div>
+                               </div>
+
+                           </div>
+                       </Slider>
+                   </div>
+                   <div className={`col-md-6`}>
+                       <div className={styles.bannerImg}>
+                           <img src={`/images/toolss.png`} />
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+
        </div>
     )
 }
