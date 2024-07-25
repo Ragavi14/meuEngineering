@@ -19,18 +19,12 @@ export default function aboutSection (about: any){
                 <div className="row">
                     <div className={`col-8 mx-auto text-center`}>
                         <Slider {...settings}>
-                            <div>
-                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
-                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
-                            </div>
-                            <div>
-                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
-                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
-                            </div>
-                            <div>
-                                <div dangerouslySetInnerHTML={{ __html: about.about.about_section.text }} />
-                                <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
-                            </div>
+                            {about.about.about_section.text_area.map((element: any, index: any)=>(
+                                <div key={index}>
+                                    <div dangerouslySetInnerHTML={{ __html: element.text }} />
+                                    <a href={about.about.about_section.link}  className="btn">{about.about.about_section.button} </a>
+                                </div>
+                            ))}
                         </Slider>
                     </div>
                 </div>
