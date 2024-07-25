@@ -3,9 +3,16 @@
 @import "slick-carousel/slick/slick-theme.css";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 
 body{
   font-family: "Roboto Slab", serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "ADLaM Display", system-ui;
 }
 
 
