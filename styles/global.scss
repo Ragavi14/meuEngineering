@@ -4,6 +4,12 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
+body{
+  font-family: "Roboto Slab", serif;
+}
+
+
+
 header {
   position: fixed;
   top: 0;
@@ -17,6 +23,7 @@ header {
 .scrolled {
   background-color: #0591D3;
 }
+
 
 
 
