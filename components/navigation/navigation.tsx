@@ -1,10 +1,7 @@
-// components/Header.js
-
 import React, { useState, useEffect } from "react";
 import styles from './navigation.module.scss';
 
 const Header = (nav: any) => {
-    // console.log('navvv :',nav);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -42,7 +39,7 @@ const Header = (nav: any) => {
                             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                                 {nav.nav.menu.map((element: any, index: any)=>(
                                     <li key={index}>
-                                        <a href={element.menu_item.link} className="nav-link px-2 link-secondary"> {element.menu_item.name} </a>
+                                        <a href={element.menu_item.link} className="nav-link px-2 link-secondary"><b> {element.menu_item.name} </b></a>
                                     </li>
                                 ))}
                             </ul>

@@ -6,7 +6,6 @@ import axios from 'axios';
 
 
 export default function ContactContent (contact: any) {
-    // console.log('CONT==',contact);
     const baseUrl = new ApiService();
     const [formData, setFormData] = useState({
         name: '',

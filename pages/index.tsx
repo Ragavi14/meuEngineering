@@ -10,7 +10,6 @@ import { ApiService } from '../services/api.service';
 
 
 export default function Home(props: any) {
-  console.log('Home:',props);
   return (
       <div>
          <Navigation nav={props.nav[0].acf} />
