@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/adlam-display": "^5.0.5",
+    "@fontsource/roboto-slab": "^5.0.20",
     "aos": "^2.3.4",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
