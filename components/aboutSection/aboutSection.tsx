@@ -10,6 +10,7 @@ const settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    fade: true,
 };
 
 export default function aboutSection (about: any){
