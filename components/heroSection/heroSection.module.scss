@@ -7,8 +7,16 @@
     background: #0591D3;
     padding-top: 40px;
     .bannerImg{
+      display: flex;
+      justify-content: center;
+      .firstImg{
+        animation: moveUpDown 4s infinite ease-in-out;
+      }
+      .secondImg{
+        animation: moveDownUp 4s infinite ease-in-out;
+      }
       img{
-        width: 100%;
+        width: 90px;
         height: 100%;
       }
     }
@@ -34,6 +42,31 @@
       width: 100%;
     }
   }
+
+@keyframes moveUpDown {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@keyframes moveDownUp {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 
 
 

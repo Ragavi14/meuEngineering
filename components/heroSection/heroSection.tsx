@@ -47,7 +47,12 @@ export default function HeroSection(slider: any) {
 
                                                         <div className={`col-md-12`}>
                                                             <div className={styles.bannerImg}>
-                                                                <img src={element.img} alt="images" />
+
+                                                                <img className={styles.firstImg} src={`/images/tool1.png`}/>
+                                                                <img className={styles.secondImg}src={`/images/tool2.png`}/>
+                                                                <img className={styles.firstImg}src={`/images/tool3.png`}/>
+                                                                <img className={styles.secondImg}src={`/images/tool4.png`}/>
+                                                                <img className={styles.firstImg}src={`/images/tool5.png`}/>
                                                             </div>
                                                         </div>
                                                     </div>
