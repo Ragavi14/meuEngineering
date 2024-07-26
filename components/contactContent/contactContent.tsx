@@ -20,7 +20,8 @@ export default function ContactContent (contact: any) {
       const [errors, setErrors] = useState({
         name: '',
         email: '',
-        mobile: ''
+        mobile: '',
+        file: ''
     });
 
     const handleChange = (e: any) => {
@@ -39,12 +40,13 @@ export default function ContactContent (contact: any) {
     };
 
     const validateForm = () => {
-        const { name, email, mobile } = formData;
+        const { name, email, mobile, file } = formData;
         let valid = true;
         const newErrors = {
             name: '',
             email: '',
-            mobile: ''
+            mobile: '',
+            file: ''
         };
 
         if (!name) {
@@ -57,6 +59,10 @@ export default function ContactContent (contact: any) {
         }
         if (!mobile) {
             newErrors.mobile = 'Please enter your Phone Number';
+            valid = false;
+        }
+        if (!file) {
+            newErrors.file = 'Please upload file';
             valid = false;
         }
 
@@ -92,7 +98,7 @@ export default function ContactContent (contact: any) {
             console.error('Error sending message:', error);
         }
         window.location.reload();
-        console.log('Data==:',formData);
+        // console.log('Data==:',formData);
     };
 
     return(
@@ -106,8 +112,7 @@ export default function ContactContent (contact: any) {
                     </div>
                     <div className={`col-md-6`}>
                             <div className={styles.formBlock}>
-                                <p>Contact Form</p>
-                                <h2>Fill the form to contact us directly</h2>
+                                <h2>Fill in this to contact us:</h2>
 
                                 <div className={styles.form}>
                                     <div className="row">
@@ -115,7 +120,7 @@ export default function ContactContent (contact: any) {
                                             <div className="form-floating mb-3">
                                                 <input type="text"  className={`form-control ${errors.name ? 'is-invalid' : ''}`}  id="floatingInput"
                                                     placeholder="Full Name" name="name" value={formData.name} onChange={handleChange} required />
-                                                <label htmlFor="floatingInput">Name</label>
+                                                <label htmlFor="floatingInput">Name*</label>
                                                 {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                                             </div>
                                         </div>
@@ -123,7 +128,7 @@ export default function ContactContent (contact: any) {
                                             <div className="form-floating mb-3">
                                                 <input type="email" className={`form-control ${errors.email ? 'is-invalid' : ''}`}  id="floatingPassword"
                                                      placeholder="Email" name="email" value={formData.email} onChange={handleChange} required/>
-                                                <label htmlFor="floatingPassword">Email</label>
+                                                <label htmlFor="floatingPassword">Email*</label>
                                                 {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                                             </div>
                                         </div>
@@ -133,7 +138,7 @@ export default function ContactContent (contact: any) {
                                             <div className="form-floating mb-3">
                                                 <input type="text"  className={`form-control ${errors.mobile ? 'is-invalid' : ''}`}  id="floatingPassword"
                                                     placeholder="Phone" name="mobile" value={formData.mobile} onChange={handleChange} required/>
-                                                <label htmlFor="floatingPassword">Phone</label>
+                                                <label htmlFor="floatingPassword">Phone*</label>
                                                 {errors.mobile && <div className="invalid-feedback">{errors.mobile}</div>}
                                             </div>
                                         </div>
@@ -148,9 +153,10 @@ export default function ContactContent (contact: any) {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="form-floating mb-3">
-                                                <input type="file" id="file"  name="file"  className="form-control" 
-                                                    onChange={handleChange}/>
-                                                <label htmlFor="floatingPassword">File</label>
+                                                <input type="file" id="file"  name="file"  className={`form-control ${errors.file ? 'is-invalid' : ''}`}
+                                                    onChange={handleChange} required/>
+                                                     {errors.file && <div className="invalid-feedback">{errors.file}</div>}
+                                                <label htmlFor="floatingPassword">File*</label>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -164,7 +170,7 @@ export default function ContactContent (contact: any) {
                                     <div className="form-floating mb-3">
                                         <textarea className="form-control h-100" id="floatingPassword"
                                                placeholder="Message" name="message" value={formData.message} onChange={handleChange}/>
-                                        <label htmlFor="floatingPassword">Message</label>
+                                        <label htmlFor="floatingPassword">Enter your query here...</label>
                                     </div>
 
                                     <button onClick={handleSubmit} className={`btn btn-primary mb-3`}>Submit</button>
