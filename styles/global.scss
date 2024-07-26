@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 @import "themes/variables";
 @import "slick-carousel/slick/slick.css";
@@ -24,7 +24,6 @@ header {
   top: 0;
   width: 100%;
   background-color: transparent;
-  padding: 0px;
   transition: background-color 0.3s ease;
   z-index: 100;
 }
