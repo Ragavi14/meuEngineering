@@ -7,7 +7,7 @@ const Header = (nav: any) => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 100) { // Adjust 100 to your desired scroll position
+            if (scrollPosition > 50) { // Adjust 100 to your desired scroll position
                 setScrolled(true);
             } else {
                 setScrolled(false);
