@@ -20,8 +20,15 @@
         transform: scale(1);
       }
       p{
-        color: #0591d3;
-
+        color: #FFFFFF;
+        background: #3A4856;
+        width: 100%;
+        min-height: 65px;
+        margin-bottom: 0px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       img{
         max-width: 200px;

@@ -24,7 +24,7 @@ export default function ProductContent({ products }: any) {
                                          <div className={styles.imgCard}>
                                              <a href={ 'products/' + products.link}>
                                                  <img src={products.img} alt={products.name} />
-                                                 <p>{products.name}</p>
+                                                 <p><span>{products.name}</span></p>
                                              </a>
                                          </div>
                                      </div>
