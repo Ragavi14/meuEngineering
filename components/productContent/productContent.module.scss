@@ -1,6 +1,7 @@
 .productContent{
     padding-top: 40px;
     padding-bottom: 40px;
+    background: #edf8fe;
     .productList{
       padding-bottom: 40px;
       padding-top: 20px;
@@ -14,6 +15,7 @@
       border-radius: 10px;
       margin-bottom: 40px;
       transition: 0.5s ease all;
+      background: #FFFFFF;
       &:hover{
         transform: scale(1);
       }
