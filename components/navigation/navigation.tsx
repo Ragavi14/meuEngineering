@@ -46,14 +46,7 @@ const Header = (nav: any) => {
                             <div className="d-flex">
                                 <div className={styles.contactIcon}>
                                     <div className={styles.callIcon}>
-                                        <div><img src={`/images/call.svg`} /> </div>
-                                        <div>
-                                            <p>{nav.nav.number}</p>
-                                            <p>{nav.nav.phone}</p>
-                                        </div>
-                                        
-                                        
-                                        
+                                       <img src={`/images/call.svg`} /> {nav.nav.number} 
                                     </div>
 
                                     <a href={nav.nav.contact.link} className={`btn btn-primary`}> {nav.nav.contact.name} </a>
