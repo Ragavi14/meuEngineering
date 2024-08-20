@@ -185,9 +185,8 @@ export default function ContactContent (contact: any) {
             </div>
 
             <div className={styles.map}>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2445132617663!2d77.6448580745473!3d13.020095213814326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae165693ffffc9%3A0x1a37d169cc8d2c28!2sNetiApps%20Software!5e0!3m2!1sen!2sin!4v1711624029099!5m2!1sen!2sin"
-                    width="100%" height="450"  loading="lazy"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15556.196547158037!2d77.6015461!3d12.904562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae151953fabd27%3A0xec4fbc327c691823!2sMeu%20Square!5e0!3m2!1sen!2sin!4v1724137420455!5m2!1sen!2sin" 
+                    width="100%" height="450" loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
