@@ -19,7 +19,7 @@ export class ApiService {
       public getSiteUrl(): string {
         if(process.env.NEXT_PUBLIC_API_ENV == 'production'){
            
-          return "https://meu.netiapps.com/";
+          return "https://meuengineering.com/";
         }
        else if(process.env.NEXT_PUBLIC_API_ENV == 'dev'){
          
@@ -27,7 +27,7 @@ export class ApiService {
           
         }
         else{
-          return "https://meu.netiapps.com/";
+          return "https://meuengineering.com/";
         }
            
       }
