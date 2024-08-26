@@ -17,12 +17,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 575.98px) {
+      a{
+        margin-left: 50px;
+        margin-bottom: 40px;
+      }
+    }
     .callIcon{
       color: #ffffff;
       font-weight: 600;
       margin-right: 10px;
       display: flex;
       font-size: 15px;
+      @media (max-width: 575.98px) {
+        display: none;
+      }
     }
     p{
       margin-left: 10px;
