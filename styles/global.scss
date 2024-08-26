@@ -33,6 +33,19 @@ header {
   background-color: #0591D3;
 }
 
+.show{
+  background: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  ul{
+    display: flex;
+    flex-flow: column;
+    a{
+      color: #161718 !important;
+    }
+  }
+}
+
 
 
 

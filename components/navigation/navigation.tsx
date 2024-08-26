@@ -39,7 +39,7 @@ const Header = (nav: any) => {
                             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                                 {nav.nav.menu.map((element: any, index: any)=>(
                                     <li key={index}>
-                                        <a href={element.menu_item.link} className="nav-link px-2 link-secondary"><b> {element.menu_item.name} </b></a>
+                                        <a href={element.menu_item.link} className="nav-link px-2 "><b> {element.menu_item.name} </b></a>
                                     </li>
                                 ))}
                             </ul>
