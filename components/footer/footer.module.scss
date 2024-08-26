@@ -45,12 +45,16 @@
         font-size: 13px;
     }
     .phone{
+        display: flex;
         text-align: center;
         p{
             font-size: 25px;
+            margin-bottom: 0px;
         }
         img{
-            margin: 0px;
+            margin-top: 10px;
+            width: 30px;
         }
+    
     }
 }

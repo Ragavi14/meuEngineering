@@ -39,7 +39,15 @@ export default function Navigation(footer: any) {
                     </div>
                     <div className="col text-end">
                         <div className={styles.phone}>
-                            <p><img src="/images/phone.svg"/> {footer.footer.number} </p>
+                            {/* <p><img src="/images/phone.svg"/> {footer.footer.number} </p> */}
+                            {/* <div className={styles.callIcon}> */}
+                           <div>  <img src={`/images/call.svg`} /> </div>
+                           <div>
+                             <p> {footer.footer.number} </p>
+                            <p>{footer.footer.phone}</p> 
+                                        </div>
+                                        
+                                    {/* </div> */}
                         </div>
                     </div>
                 </div>
