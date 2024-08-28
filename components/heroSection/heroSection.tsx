@@ -33,7 +33,7 @@ export default function HeroSection(slider: any) {
                                             <div>
                                                 <div dangerouslySetInnerHTML={{ __html: element.text_content.text }} />
                                                 <div className={`d-flex justify-content-start align-items-center`}>
-                                                    <a className="btn me-3" href={element.text_content.link}> {element.text_content.button} </a>
+                                                    <a className="btn me-3" href={element.text_content.pdf}> {element.text_content.button} </a>
                                                     <img src={element.text_content.img} />
                                                 </div>
                                             </div>
