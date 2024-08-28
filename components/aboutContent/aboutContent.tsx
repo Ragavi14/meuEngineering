@@ -10,7 +10,7 @@ export default function AboutContent (about: any) {
                 <div className={`container`}>
                     <div className={`row`}>
                         {about.about.first_content.map((element: any, index: any)=>(
-                        <div className={`col-md-4`} key={index}>
+                        <div className={`col-md-6`} key={index}>
                             <div className={styles.aboutCard}>
                             <div dangerouslySetInnerHTML={{ __html: element.text }} />
                             </div>
