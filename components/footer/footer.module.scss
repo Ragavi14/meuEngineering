@@ -59,6 +59,8 @@
     }
 }
 
+
+
 .scrollDiv {
     position: fixed;
     bottom: 20px;
@@ -71,6 +73,9 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     color: #000;
+    @media (max-width: 575.98px) {
+        display: none;
+    }
 }
 
 .closeButton {
