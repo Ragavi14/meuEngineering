@@ -49,7 +49,7 @@ const Header = (nav: any) => {
                                        <img src={`/images/call.svg`} className={`me-1`} /> {nav.nav.number}
                                     </div>
 
-                                    <a className={styles.btnImage} href={nav.nav.contact.link}> <img width={`113px`} src={`/images/button.png`} /> </a>
+                                    <a className={styles.btnImage} href={nav.nav.contact.link}> <img width={`150px`} src={`/images/button.png`} /> </a>
                                 </div>
                             </div>
                         </div>
