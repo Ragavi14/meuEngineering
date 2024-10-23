@@ -70,7 +70,7 @@ export default function Navigation(footer: any) {
                         &times; {/* Close icon or text */}
                     </div>
                     <h3>Didn't find the service you're looking for?</h3>
-                    <a href={`/`}><img src={`/images/button.png`} /></a>
+                    <a href={`/contact`}><img src={`/images/button.png`} /></a>
                 </div>
             )}
         </div>
