@@ -46,10 +46,10 @@ const Header = (nav: any) => {
                             <div className="d-flex">
                                 <div className={styles.contactIcon}>
                                     <div className={styles.callIcon}>
-                                       <img src={`/images/call.svg`} /> {nav.nav.number} 
+                                       <img src={`/images/call.svg`} className={`me-1`} /> {nav.nav.number}
                                     </div>
 
-                                    <a href={nav.nav.contact.link} className={`btn btn-primary`}> {nav.nav.contact.name} </a>
+                                    <a className={styles.btnImage} href={nav.nav.contact.link}> <img width={`113px`} src={`/images/button.png`} /> </a>
                                 </div>
                             </div>
                         </div>
