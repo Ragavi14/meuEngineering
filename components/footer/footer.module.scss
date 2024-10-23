@@ -58,3 +58,27 @@
     
     }
 }
+
+.scrollDiv {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 360px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: #000;
+}
+
+.closeButton {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    color: #333;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+}
