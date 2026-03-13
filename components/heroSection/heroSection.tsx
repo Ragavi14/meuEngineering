@@ -24,7 +24,7 @@ export default function HeroSection(slider: any) {
     return (
        <div className={`${styles.banner}`}>
                <Slider {...settings}>
-                    {slider.slider.map((element: any, index: any)=>(
+                    {slider.slider?.map((element: any, index: any)=>(
                         <div key={index}>
                             <div className={`container`} >
                                 <div className={`row`}>

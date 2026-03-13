@@ -35,33 +35,33 @@ export default function Navigation(footer: any) {
             <div className="container">
                 <div className={`${styles.box} row`}>
                     <div className="col-md-10 text-start">
-                        <p>{footer.footer.box.text}</p>
-                        <a href={footer.footer.box.link} className="btn btn-primary">{footer.footer.box.button_name}</a>
+                        <p>{footer.footer?.box.text}</p>
+                        <a href={footer.footer?.box.link} className="btn btn-primary">{footer.footer?.box.button_name}</a>
                     </div>
                     <div className="col-md-2">
-                        <img src={footer.footer.box.img} alt="Footer Box" />
+                        <img src={footer.footer?.box.img} alt="Footer Box" />
                     </div>
                 </div>
                 <div className={`${styles.address} row justify-content-center align-items-center`}>
                     <div className="col-md-3">
-                        <img src={footer.footer.logo} alt="Logo" />
-                        <div dangerouslySetInnerHTML={{ __html: footer.footer.address }} />
+                        <img src={footer.footer?.logo} alt="Logo" />
+                        <div dangerouslySetInnerHTML={{ __html: footer.footer?.address }} />
                     </div>
                     <div className="col-md-6">
-                        <div dangerouslySetInnerHTML={{ __html: footer.footer.disclaimer }} />
+                        <div dangerouslySetInnerHTML={{ __html: footer.footer?.disclaimer }} />
                     </div>
                     <div className="col text-end">
                         <div className={styles.phone}>
                             <div><img src={`/images/call.svg`} alt="Call Icon" /></div>
                             <div>
-                                <p>{footer.footer.number}</p>
-                                <p>{footer.footer.phone}</p>
+                                <p>{footer.footer?.number}</p>
+                                <p>{footer.footer?.phone}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={`${styles.copyRight} row`}>
-                    <div dangerouslySetInnerHTML={{ __html: footer.footer.copy_right }} />
+                    <div dangerouslySetInnerHTML={{ __html: footer.footer?.copy_right }} />
                 </div>
             </div>
             {isVisible && (

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import '../../styles/global.scss'
+import '../styles/global.scss'
 import Script from "next/script";
 import React from "react";
 

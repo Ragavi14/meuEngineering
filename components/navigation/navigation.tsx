@@ -29,7 +29,7 @@ const Header = (nav: any) => {
 
                 <nav className="navbar navbar-expand-lg ">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href={nav.nav.logo.link}> <img src={nav.nav.logo.img} /></a>
+                        <a className="navbar-brand" href={nav?.nav?.contact?.link}> <img src={nav?.nav?.logo?.img} /></a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@ const Header = (nav: any) => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                                {nav.nav.menu.map((element: any, index: any)=>(
+                                {nav.nav?.menu?.map((element: any, index: any)=>(
                                     <li key={index}>
                                         <a href={element.menu_item.link} className="nav-link px-2 "><b> {element.menu_item.name} </b></a>
                                     </li>
@@ -46,10 +46,10 @@ const Header = (nav: any) => {
                             <div className="d-flex">
                                 <div className={styles.contactIcon}>
                                     <div className={styles.callIcon}>
-                                       <img src={`/images/call.svg`} className={`me-1`} /> {nav.nav.number}
+                                       <img src={`/images/call.svg`} className={`me-1`} /> {nav.nav?.number}
                                     </div>
 
-                                    <a className={styles.btnImage} href={nav.nav.contact.link}> <img width={`150px`} src={`/images/button.png`} /> </a>
+                                    <a className={styles.btnImage} href={nav?.nav?.contact?.link}> <img width={`150px`} src={`/images/button.png`} /> </a>
                                 </div>
                             </div>
                         </div>

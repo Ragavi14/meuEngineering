@@ -48,13 +48,13 @@ export default function ClientSection (client: any) {
                 <div className={`row`}>
                     <div className={`col-12 text-center pt-5`}>
                         <div className={styles.clientsText}>
-                            <h2>{client.client.title}</h2>
+                            <h2>{client.client?.title}</h2>
                         </div>
                     </div>
                 </div>
                 <div className={styles.clients}>
                     <Slider {...settings}>
-                        {client.client.client_img.map((element: any, index: any)=>(                                                 
+                        {client.client?.client_img.map((element: any, index: any)=>(                                                 
                             <div className={styles.clientIcon} key={index}> 
                                 <img src={element.img} alt={element.name} /> 
                             </div>                         
